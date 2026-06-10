@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: mike-batman-cohen-portfolio
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .

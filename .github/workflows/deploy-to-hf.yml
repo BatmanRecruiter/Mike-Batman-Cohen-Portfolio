@@ -1,4 +1,4 @@
-﻿name: Deploy to Hugging Face Space
+name: Deploy to Hugging Face Space
 on:
   push:
     branches: [main]
@@ -22,7 +22,8 @@ jobs:
           python -c "
           from huggingface_hub import HfApi
           import os
-          api = HfApi(token=os.environ['HF_TOKEN'])
+          # strip BOM/whitespace that can sneak into the secret when pasted from Windows
+          api = HfApi(token=os.environ['HF_TOKEN'].encode('ascii', 'ignore').decode().strip())
           api.upload_folder(
               folder_path='.',
               repo_id='BatmanRecruiter/real-mike-batman-cohen-portfolio',

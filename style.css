@@ -544,6 +544,15 @@
   width: min(1240px, calc(100vw - 40px));
 }
 
+/* Close the gap between the advisory logos and Selected work */
+#clients {
+  padding-bottom: clamp(32px, 4vw, 56px);
+}
+
+#work {
+  padding-top: clamp(32px, 4vw, 56px);
+}
+
 .work-grid {
   display: grid;
   align-items: start;

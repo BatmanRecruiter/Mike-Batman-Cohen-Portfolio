@@ -297,15 +297,10 @@
   border-right: 0;
 }
 
-/* Pull the first section up under the intro band so it doesn't read as the end of the page */
-.intro-band + .section {
-  padding-top: clamp(40px, 5vw, 64px);
-}
-
 .section {
   width: var(--container);
   margin: 0 auto;
-  padding: clamp(76px, 12vw, 148px) 0;
+  padding: clamp(28px, 4vw, 56px) 0;
   scroll-margin-top: 104px;
 }
 
@@ -542,15 +537,6 @@
 
 .section--work {
   width: min(1240px, calc(100vw - 40px));
-}
-
-/* Close the gap between the advisory logos and Selected work */
-#clients {
-  padding-bottom: clamp(32px, 4vw, 56px);
-}
-
-#work {
-  padding-top: clamp(32px, 4vw, 56px);
 }
 
 .work-grid {

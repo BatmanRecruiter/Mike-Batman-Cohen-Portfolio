@@ -331,28 +331,43 @@
 .cert-callout {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  max-width: 100%;
   margin: 0 0 24px;
   border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
-  padding: 8px 16px 8px 8px;
+  padding: 8px 14px 8px 8px;
   color: var(--color-black);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: -0.01em;
 }
 
-.cert-callout span {
+.cert-callout__tag {
+  flex: none;
   border-radius: 999px;
   background: #d97757;
-  padding: 7px 10px;
+  padding: 7px 9px;
   white-space: nowrap;
   color: var(--color-white);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 10.5px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* Keep the credential on one line on desktop. */
+.cert-callout__text {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* Below this width the hero column is too narrow for one line, so let it wrap. */
+@media (max-width: 1140px) {
+  .cert-callout__text {
+    white-space: normal;
+  }
 }
 
 .github-callout {
